@@ -19,15 +19,25 @@ namespace FibonacciEvenSum
             //whose values do not exceed four million, 
             //find the sum of the even-valued terms.
 
-            int num1 = 0, num2 = 1, sum;
-            
-            for (int i = 1; i <= 10; i++)
+            int num1 = 0, num2 = 1, sum = 0, evensum=0;
+            while (sum < 4000000)
             {
-                sum = num1 + num2;
-                Console.WriteLine(sum);
-                num1 = num2;
-                num2 = sum;
+                //fib sequence
+                    sum = num1 + num2;
+                    num1 = num2;
+                    num2 = sum;
+                //check if it is odd
+                if (sum % 2 == 1)
+                {
+                    //Console.WriteLine(sum); ;
+                }
+                //if it is not odd
+                else evensum += sum;
+                {
+                    //Console.WriteLine(evensum);
+                } 
             }
+            Console.WriteLine(evensum);
 
         }
     }
